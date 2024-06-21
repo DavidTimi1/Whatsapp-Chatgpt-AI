@@ -1,1 +1,2 @@
-from Google.fenerativeai import genai
+from Google.generativeai import genai
+from flask import Flask, render 
