@@ -257,7 +257,7 @@ def send_whats_message(message, to, reply_id, reaction=None):
 def transcribe_audio(file_id):
     # get a url to download the file from meta
     headers = {'Authorization': f'Bearer {META_TOKEN}','Content-Type': 'application/json'}
-    response = requests.get(f'https://graph.facebook.com/{META_API}/{id}', headers=headers)
+    response = requests.get(f'https://graph.facebook.com/{META_API}/{file_id}', headers=headers)
 
     if response.status_code != 200: print (f"Failed to get file url: {response.json()}")
     else:
